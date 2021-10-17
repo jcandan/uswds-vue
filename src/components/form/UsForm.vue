@@ -30,7 +30,7 @@ export default {
     },
     methods: {
         
-        async doSubmit() {
+        async doSubmit(event) {
 
             if (this.validate){
                 this.isValid = await this.__validateChildren(this.$children);
@@ -43,7 +43,7 @@ export default {
                 console.log('>>>> ', this.validate)
             }
 
-            this.$emit('submit');
+            this.$emit('submit', event);
         },
 
         onValidated({isValid, isDirty, errors, context}){
