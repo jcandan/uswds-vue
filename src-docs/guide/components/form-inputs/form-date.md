@@ -136,7 +136,7 @@ You can set a min and max year with the `min-year` and `max-year` props, which e
 | max-year  | number | 9999 | The max year required, only used if `required` is set to true |
 | min-year  | number | 0 | The min year required, only used if `required` is set to true |
 | name  | string | null | The title |
-| value-as-date  | string | info | Applies one of the contextual color variants |
+| value-as-date  | boolean | false | Expects the input date (v-model) to be a Date object, and will return the date as a Date object |
 | format | string | 'YYYY-MM-DD' | The date format, see (momentjs docs)[https://momentjs.com/docs/#/parsing/] for more. |
 
 ### Further Reading
