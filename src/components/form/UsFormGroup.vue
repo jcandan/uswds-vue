@@ -6,11 +6,14 @@
         </slot>
 
         <!-- Help text -->
-        <slot name="help-text" v-if="helpTop">
+        <span class="usa-hint" v-if="helpTop">
             <span v-if="helpText" class="usa-hint">
                 {{ helpText }}
             </span>
-        </slot>
+            <slot name="help-text"/>
+            <!-- Help text, bootstrap compatibility -->
+            <slot name="description"/>
+        </span>
 
         <slot v-bind="{ localValid, divId }"></slot>
 
@@ -20,11 +23,15 @@
         </slot>
 
         <!-- Help text -->
-        <slot name="help-text" v-if="!helpTop">
-            <span v-if="helpText" class="usa-hint">
+        <span class="usa-hint" v-if="!helpTop">
+            <span v-if="helpText">
                 {{ helpText }}
             </span>
-        </slot>
+            <slot name="help-text"/>
+            <!-- Help text, bootstrap compatibility -->
+            <slot name="description"/>
+        </span>
+
 
     </div>
 </template>
