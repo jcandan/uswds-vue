@@ -1,6 +1,5 @@
 <template>
      
-
     <ul v-if="!title" ref="sidenavParentRef" class="usx-component usx-sidenav usa-sidenav">
         <!-- Slots for side nav item -->
         <slot></slot>

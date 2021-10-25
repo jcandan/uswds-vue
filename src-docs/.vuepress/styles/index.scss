@@ -12,9 +12,12 @@
     }    
 }
 
-@import "~uswds/dist/css/uswds.css";
-@import '../../../dist/uswds-vue.css';
-//@import "../../../../src/styles/uswds-vue.scss";
+//@import '../../../dist/uswds-vue.css';
+@import "../../../src/styles/uswds-vue.scss";
+@import "./theme.scss";
+// Then import Bootstrap an BootstrapVue SCSS files (order is important)
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
 
 
 a.sidebar-link.active,  a.sidebar-link:active {

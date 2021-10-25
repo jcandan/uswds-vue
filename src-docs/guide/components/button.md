@@ -4,7 +4,7 @@ Custom `<us-button>` component for actions in forms, dialogs, and more. Includes
 
 ## Overview
 
-<us-button variant="primary" class="mt-4">This is a button</us-button>
+<us-button variant="primary" class="mt-4">This is a button 2</us-button>
 
 ``` vue
 <us-button variant="primary">
