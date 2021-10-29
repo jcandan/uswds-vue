@@ -1,7 +1,43 @@
 
+// TODO: just pull in icons used
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+.nav {
+
+    .nav-item {
+        border: none;
+        border-top: 1px solid #e6e6e6;
+        //font-size: 1.3rem;
+        margin-bottom: 0;
+    }
+
+    &.flex-column {
+        a.active, a.router-link-active {
+            color: #005ea2;
+            font-weight: 700;      
+            background-color: #eee;
+            border-left: 3px solid #004c97;    
+        }
+    }
+
+    .nav-link:hover  {
+        border-bottom: none !important;
+    }
+
+    a.nav-link:hover {
+        text-decoration: none !important;
+    }
+        
+    :focus {
+        outline: none;
+        outline-offset: 0;;
+    }
 
 
-//@import "./variables.scss";
+}
 
-// TODO: bring into project.. but only used icons?
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
+.btn {
+    &.btn-link {
+        text-decoration: underline;
+    }
+}

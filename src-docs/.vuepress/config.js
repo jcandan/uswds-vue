@@ -123,8 +123,8 @@ module.exports = {
             //  ]
             //},
             //'components/footer',
-            //'components/header',
-            //'components/left-nav',
+            'components/banner',
+            'components/left-nav',
             //'components/lists',
             //'components/modal',
             //'components/progress',

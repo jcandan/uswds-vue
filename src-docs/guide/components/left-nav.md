@@ -1,47 +1,23 @@
-# Left Navigation
+# Side Navigation
 
-<div class="mt-3 mb-3">
-    <us-row>
-        <us-col>
-            <us-side-nav>
-                <us-side-nav-item @click="link = 'Link 1'">Link 1</us-side-nav-item>
-                <us-side-nav-item @click="link = 'Link 2'">Link 2</us-side-nav-item>
-                <us-side-nav @click="link = 'Link 3'" title="Link 3 with children">
-                    <us-side-nav-item @click="link = 'Child 1'">Child link 1</us-side-nav-item>
-                    <us-side-nav-item @click="link = 'Child 2'">Child link 2</us-side-nav-item>
-                    <us-side-nav @click="link = 'Link 4'" title="Link 4 with grand-children">
-                        <us-side-nav-item @click="link = 'Grandchild 1'">Grandchild link 1</us-side-nav-item>
-                        <us-side-nav-item @click="link = 'Grandchild 2'">Grandchild link 2</us-side-nav-item>
-                    </us-side-nav>
-                </us-side-nav>
-                <us-side-nav-item @click="link = 'Link 5'">Link 5</us-side-nav-item>
-                <us-side-nav-item @click="link = 'Link 6'">Link 6</us-side-nav-item>
-            </us-side-nav>        
-        </us-col>
-        <us-col>
-            <h3 class="ml-3">
-                Selected:
-                <span class="text-primary" v-if="link">{{link}}</span>
-            </h3>
-        </us-col>
-    </us-row>
+<div class="mt-3 mb-3 usx-component">
+    <b-nav vertical class="w-25">
+        <b-nav-item active>Active</b-nav-item>
+        <b-nav-item>Link</b-nav-item>
+        <b-nav-item>Another Link</b-nav-item>
+        <b-nav-item disabled>Disabled</b-nav-item>
+    </b-nav>
 </div>
 
+This library doesn't provide an actual component for side-nav, instead provides style over-rideds so you can use the bootstrap side-nav as-is.
+
 ```vue
-<us-side-nav>
-    <us-side-nav-item @click="link = 'Link 1'">Link 1</us-side-nav-item>
-    <us-side-nav-item @click="link = 'Link 2'">Link 2</us-side-nav-item>
-    <us-side-nav @click="link = 'Link 3'" title="Link 3 with children">
-        <us-side-nav-item @click="link = 'Child 1'">Child link 1</us-side-nav-item>
-        <us-side-nav-item @click="link = 'Child 2'">Child link 2</us-side-nav-item>
-        <us-side-nav @click="link = 'Link 4'" title="Link 4 with grand-children">
-            <us-side-nav-item @click="link = 'Grandchild 1'">Grandchild link 1</us-side-nav-item>
-            <us-side-nav-item @click="link = 'Grandchild 2'">Grandchild link 2</us-side-nav-item>
-        </us-side-nav>
-    </us-side-nav>
-    <us-side-nav-item @click="link = 'Link 5'">Link 5</us-side-nav-item>
-    <us-side-nav-item @click="link = 'Link 6'">Link 6</us-side-nav-item>
-</us-side-nav>       
+<b-nav vertical>
+    <b-nav-item active>Active</b-nav-item>
+    <b-nav-item>Link</b-nav-item>
+    <b-nav-item>Another Link</b-nav-item>
+    <b-nav-item disabled>Disabled</b-nav-item>
+</b-nav>    
 ```
 
 <script>

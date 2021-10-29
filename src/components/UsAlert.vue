@@ -13,8 +13,8 @@
             <i v-else class="fas fa-info-circle"></i>
         </div>
         <div class="usx-alert-content" :class="(noIcon) ? '':'usx-alert-content-with-icon'">
-            <h4 class="usx-alert-heading" v-if="title">{{title}}</h4>
-            <slot name="default"></slot>
+            <h2 class="usx-alert-heading" v-if="title">{{title}}</h2>
+            <div><slot name="default"></slot></div>
         </div>
     </bv-alert>
 
@@ -83,6 +83,16 @@ export default {
 
 .usx-alert {
 
+    /*
+    .usx-alert.usx-alert-lg .usx-alert-heading {
+        font-weight: bold;
+        font-size: 1.33rem;
+        line-height: .9;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+    */
+
     &.usx-alert-lg {
         .usx-alert-content {
             padding-top: 10px;
@@ -90,18 +100,19 @@ export default {
         }  
         .usx-alert-icon {
             padding-top: 10px;
-            font-size: 1.33rem;
+            font-size: 24px;
             line-height: 100%;
         }
         .usx-alert-heading {
+            display: inline-block;
             font-weight: bold;
-            font-size: 1.33rem;
+            font-size: 24px;
             line-height: .9;
             margin-top: 0;
-            margin-bottom: .5rem;
+            margin-bottom: 0;
         }
         .usx-alert-content-with-icon {
-            padding-left: 2rem;
+            padding-left: 32px;
         }
     }
 
@@ -141,27 +152,27 @@ export default {
     //background-color: rgba($info, .1) !important;
 
     &.usx-alert-info {
-        background-color: #e7f6f8;
-        border-left-color: #00bde3;    
-        color: #1b1b1b;    
+        background-color: #e7f6f8 !important; 
+        border-left-color: #00bde3 !important;    
+        color: #1b1b1b !important;     
     }
 
     &.usx-alert-warning {
-        background-color: #faf3d1;
-        border-left-color: #ffbe2e;
-        color: #1b1b1b;
+        background-color: #faf3d1 !important; 
+        border-left-color: #ffbe2e !important; 
+        color: #1b1b1b !important; 
     }
 
     &.usx-alert-success {
-        background-color: #ecf3ec;
-        border-left-color: #00a91c;
-        color: #1b1b1b;
+        background-color: #ecf3ec !important; 
+        border-left-color: #00a91c !important; 
+        color: #1b1b1b !important; 
     }
 
     &.usx-alert-error, &.usx-alert-danger {
-        background-color: #f4e3db;
-        border-left-color: #d54309;
-        color: #1b1b1b;
+        background-color: #f4e3db !important; 
+        border-left-color: #d54309 !important; 
+        color: #1b1b1b !important; 
     }
 
 }

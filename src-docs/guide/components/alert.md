@@ -4,7 +4,7 @@ An alert keeps users informed of important and sometimes time-sensitive changes.
 
 ## Overview
 
-<b-alert show dismissible show title="Info">This is a info message</b-alert>
+<us-alert show dismissible show title="Info">This is a info message</us-alert>
 
 ``` vue
 <b-alert show variant="info" title="Info">
@@ -14,8 +14,8 @@ An alert keeps users informed of important and sometimes time-sensitive changes.
 
 ## Alert Size
 
-<b-alert show variant="info" size="sm" class="mb-3">This is a small alert</b-alert>
-<b-alert show variant="info" class="mb-3">This is a normal size alert</b-alert>
+<us-alert show variant="info" size="sm" class="mb-3">This is a small alert</us-alert>
+<us-alert show variant="info" class="mb-3">This is a normal size alert</us-alert>
 
 ``` vue
 <b-alert show variant="info" size="sm">

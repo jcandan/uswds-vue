@@ -1,8 +1,10 @@
-
+import Logger from './utils/Logger';
 
 import UsAlert from './components/UsAlert';
 //import UsTag from './components/UsTag';
 //import UsButton from './components/UsButton';
+import UsOfficialHeader from './components/header/UsOfficialHeader';
+
 
 /*
 import UsCard from './components/cards/UsCard';
@@ -34,7 +36,6 @@ import UsHeaderNav from './components/header/UsHeaderNav';
 import UsSideNavItem from './components/side-nav/UsSideNavItem';
 import UsSideNav from './components/side-nav/UsSideNav';
 import UsHeaderBrand from './components/header/UsHeaderBrand';
-import UsOfficialHeader from './components/header/UsOfficialHeader';
 import UsContainer from './components/layout/UsContainer';
 import UsRow from './components/layout/UsRow';
 import UsCol from './components/layout/UsCol';
@@ -51,7 +52,8 @@ import UsProgress from './components/UsProgress';
 //import UsResponsiveInfo from './components/debug/UsResponsiveInfo';
 
 export const Components = {
-    BAlert: UsAlert,
+    UsAlert,
+    UsOfficialHeader
     //UsTag,
     //UsButton
 };
@@ -66,6 +68,8 @@ export const Components = {
  */
 const UswdsVue = {
     install(Vue, config = {}) {
+
+        Vue.use(Logger);
 
         Object.keys(Components).forEach((name) => {
             // Remove the existing bootstrap-vue component
@@ -83,11 +87,7 @@ const UswdsVue = {
 
 export { UswdsVue };
 
-if (typeof window !== 'undefined' && window.Vue) {
-    window.Vue.use(UswdsVue);
-}
-
 // Export utils
-import Validator from './utils/Validator';
-export {Validator}
+//import Validator from './utils/Validator';
+//export {Validator}
 
