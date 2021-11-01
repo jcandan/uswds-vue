@@ -28,8 +28,7 @@
 
 <script>
 
-import {upperFirst, map} from 'lodash';
-import CoreMixin from '../mixins/CoreMixin';
+import CoreMixin from '../../mixins/CoreMixin';
 
 export default {
     name: 'us-side-nav-item',

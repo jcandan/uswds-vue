@@ -27,7 +27,7 @@ import { BAlert } from 'bootstrap-vue'
 
 
 export default {
-    name: 'b-alert',
+    name: 'us-alert',
     //extends: BAlert,
     props: {
         size: {

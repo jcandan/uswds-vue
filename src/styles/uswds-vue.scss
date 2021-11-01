@@ -18,11 +18,23 @@
             background-color: #eee;
             border-left: 3px solid #004c97;    
         }
+        
+    }
+
+    .nav-item  {
+        &.active a:first-child, &.router-link-active a:first-child {
+            color: #005ea2;
+            font-weight: 700;      
+            background-color: #eee;
+            border-left: 3px solid #004c97;        
+        }
     }
 
     .nav-link:hover  {
         border-bottom: none !important;
+        margin-bottom: 0px !important; 
     }
+
 
     a.nav-link:hover {
         text-decoration: none !important;
