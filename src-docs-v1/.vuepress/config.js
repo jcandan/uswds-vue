@@ -123,7 +123,7 @@ module.exports = {
             //  ]
             //},
             //'components/footer',
-            //'components/banner',
+            'components/banner',
             //'components/left-nav',
             //'components/lists',
             //'components/modal',
