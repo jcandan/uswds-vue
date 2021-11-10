@@ -5,6 +5,8 @@ import Logger from './utils/Logger';
 //import UsSideNavItem from './components/side-nav/UsSideNavItem';
 //import UsSideNav from './components/side-nav/UsSideNav';
 
+//import UsNavItem from './components/header/UsNavItem';
+
 /*
 import UsCard from './components/cards/UsCard';
 import UsCardHeader from './components/cards/UsCardHeader';
@@ -30,7 +32,7 @@ import UsPill from './components/UsPill';
 import UsImg from './components/UsImg';
 import UsHeader from './components/header/UsHeader';
 import UsFooter from './components/UsFooter';
-import UsNavItem from './components/header/UsNavItem';
+
 import UsHeaderNav from './components/header/UsHeaderNav';
 
 import UsHeaderBrand from './components/header/UsHeaderBrand';
