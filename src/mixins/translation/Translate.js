@@ -1,4 +1,3 @@
-import stringSimilarity from 'string-similarity';
 import Vue from 'vue';
 import md5 from '../../utils/md5';
 import _ from 'lodash';

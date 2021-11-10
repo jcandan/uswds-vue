@@ -101,7 +101,7 @@ module.exports = {
           collapsable: false,
           children: [
             'components/alert',
-            //'components/button',
+            'components/button',
             //'components/card',
             //'components/form',
             //'components/form-group',
@@ -123,8 +123,8 @@ module.exports = {
             //  ]
             //},
             //'components/footer',
-            'components/banner',
-            'components/left-nav',
+            //'components/banner',
+            //'components/left-nav',
             //'components/lists',
             //'components/modal',
             //'components/progress',

@@ -1,7 +1,10 @@
 <template>
-    <nav class="nav flex-column usx-component">
+
+    <nav class="usx-component nav flex-column" v-bind="$props">
         <slot></slot>
     </nav>
+
+
      <!--
     <ul v-if="!title" ref="sidenavParentRef" class="usx-component usx-sidenav usa-sidenav">
         Slots for side nav item 

@@ -1,11 +1,9 @@
 import Logger from './utils/Logger';
 
-import UsAlert from './components/UsAlert';
 //import UsTag from './components/UsTag';
-//import UsButton from './components/UsButton';
-import UsOfficialHeader from './components/header/UsOfficialHeader';
-import UsSideNavItem from './components/side-nav/UsSideNavItem';
-import UsSideNav from './components/side-nav/UsSideNav';
+//import UsOfficialHeader from './components/header/UsOfficialHeader';
+//import UsSideNavItem from './components/side-nav/UsSideNavItem';
+//import UsSideNav from './components/side-nav/UsSideNav';
 
 /*
 import UsCard from './components/cards/UsCard';
@@ -51,11 +49,15 @@ import UsProgress from './components/UsProgress';
 // Debug components
 //import UsResponsiveInfo from './components/debug/UsResponsiveInfo';
 
+import UsAlert from './components/UsAlert';
+import UsButton from './components/UsButton';
+
+
 export const Components = {
     UsAlert,
-    UsOfficialHeader,
-    UsSideNavItem,
-    UsSideNav
+    UsButton
+    //UsAlert: require('./components/UsAlert'),
+    //UsButton: require('./components/UsButton'),
     //UsTag,
     //UsButton
 };
@@ -74,16 +76,9 @@ const UswdsVue = {
         Vue.use(Logger);
 
         Object.keys(Components).forEach((name) => {
-            // Remove the existing bootstrap-vue component
-            //console.log(`Deleting component ${Components[name]}`)
-            delete Vue.options.components[Components[name]];            
             //console.log(`Installing component ${Components[name]}`)
             Vue.component(name, Components[name]);
         });
-
-        if (config.bootstrap) {
-            // Layer in bootstrap utility styles...
-        }
     }
 };
 

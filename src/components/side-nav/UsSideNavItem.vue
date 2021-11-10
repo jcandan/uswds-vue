@@ -1,6 +1,10 @@
 <template>
 
-            
+    <a class="usx-component nav-link" href="#" v-bind="$props">
+        <slot></slot>
+    </a>
+
+    <!--            
     <li 
         class="usx-component usx-sidenav-item usa-sidenav__item"        
         ref="sidenavRef"        
@@ -23,16 +27,15 @@
         </div>
 
     </li>
-
+-->
 </template>
 
 <script>
 
-import CoreMixin from '../../mixins/CoreMixin';
+//import CoreMixin from '../../mixins/CoreMixin';
 
 export default {
     name: 'us-side-nav-item',
-    mixins: [CoreMixin],
     props: {
         title: {
             type: String,

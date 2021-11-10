@@ -7,9 +7,9 @@ An alert keeps users informed of important and sometimes time-sensitive changes.
 <us-alert show dismissible show title="Info">This is a info message</us-alert>
 
 ``` vue
-<b-alert show variant="info" title="Info">
+<us-alert show variant="info" title="Info">
     This is a info message
-</b-alert>
+</us-alert>
 ```
 
 ## Alert Size
@@ -18,45 +18,45 @@ An alert keeps users informed of important and sometimes time-sensitive changes.
 <us-alert show variant="info" class="mb-3">This is a normal size alert</us-alert>
 
 ``` vue
-<b-alert show variant="info" size="sm">
+<us-alert show variant="info" size="sm">
     This is a small alert
-</b-alert>
+</us-alert>
 
-<b-alert show variant="info">
+<us-alert show variant="info">
     This is a normal size alert
-</b-alert>
+</us-alert>
 ```
 
 ## No Icon
 
-<b-alert show variant="info" no-icon>This is a alert with no icon</b-alert>
+<us-alert show variant="info" no-icon>This is a alert with no icon</us-alert>
 
 ``` vue
-<b-alert variant="info" no-icon>
+<us-alert variant="info" no-icon>
     This is a alert with no icon
-</b-alert>
+</us-alert>
 ```
 
 ## Contextual variants
 
-For proper styling of `<b-alert>`, use one of the contextual variants by setting the variant prop to one of the following: info, success, warning or danger. The default is info.
+For proper styling of `<us-alert>`, use one of the contextual variants by setting the variant prop to one of the following: info, success, warning or danger. The default is info.
 
 <span v-for="(variant,index) in ['info','success','danger','warning']" :key="index">
-    <b-alert show :variant="variant" class="mb-0 mt-0">This is a <strong>{{variant}}</strong> message</b-alert><br/>
+    <us-alert show :variant="variant" class="mb-0 mt-0">This is a <strong>{{variant}}</strong> message</us-alert><br/>
 </span>
 
 ## Dismissible alerts
 
-Using the `dismissible` prop it's possible to dismiss any `<b-alert>` inline. This will add a close X button. Use the dismiss-label prop to change the hidden label text associated with the dismiss button.
+Using the `dismissible` prop it's possible to dismiss any `<us-alert>` inline. This will add a close X button. Use the dismiss-label prop to change the hidden label text associated with the dismiss button.
 
 <div class="mt-3 mb-3">
-    <b-alert :show="showAlert1" variant="danger" dismissible @onDismissed="onDismissed(1)">You can dismiss this alert</b-alert>
+    <us-alert :show="showAlert1" variant="danger" dismissible @onDismissed="onDismissed(1)">You can dismiss this alert</us-alert>
     <b-button class="mt-1" variant="primary" @click="showAlert1 = true" v-if="!showAlert1">Show</b-button>
 </div>
 
 ```vue
 <template>
-    <b-alert :show="showAlert" variant="danger" dismissible @onDismissed="onDismissed(1)">You can dismiss this alert</b-alert>
+    <us-alert :show="showAlert" variant="danger" dismissible @onDismissed="onDismissed(1)">You can dismiss this alert</us-alert>
     <b-button class="mt-1" variant="primary" @click="variant = true" v-if="!variant">Show</b-button>
 </template>
 <script>
@@ -105,7 +105,7 @@ export default {
 
 ## Component Reference
 
-### `<b-alert>`
+### `<us-alert>`
 
 ### Properties 
 
