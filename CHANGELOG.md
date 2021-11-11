@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.38](https://github.com/thepipster/uswds-vue/compare/v0.1.37...v0.1.38) (2021-11-11)
+
 ### [0.1.37](https://github.com/usds/uswds-vue/compare/v0.1.32...v0.1.37) (2021-11-11)
 
 

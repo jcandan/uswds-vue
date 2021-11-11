@@ -1,6 +1,6 @@
 {
   "name": "uswds-vue",
-  "version": "0.1.37",
+  "version": "0.1.38",
   "private": false,
   "description": "Vue USWDS component library",
   "scripts": {
@@ -131,5 +131,5 @@
     "vuejs"
   ],
   "license": "MIT",
-  "repository": "https://github.com/usds/uswds-vue"
+  "repository": "https://github.com/thepipster/uswds-vue"
 }
