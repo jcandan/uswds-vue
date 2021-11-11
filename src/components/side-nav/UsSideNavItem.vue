@@ -1,8 +1,30 @@
 <template>
 
-    <a class="usx-component nav-link" href="#" v-bind="$props">
+    <router-link 
+        @click="onClick"
+        v-if="to"
+        :to="to"
+        :href="href"
+        :target="target"
+        tag='a'
+        class="usx-component nav-link"
+        :class="{'active':isActive}">
         <slot></slot>
+    </router-link>
+
+    <a v-else 
+        ref="sidenavRef"
+        class="usx-component nav-link" 
+        :class="{'active':isActive}" 
+        aria-current="page" 
+        href="#" 
+        @click="onClick">
+        <slot></slot>
+        <us-badge :variant="(isSubNav) ? 'success' : 'secondary'">isSubNav</us-badge>
+        <us-badge :variant="(hasSubNav) ? 'success' : 'secondary'">hasSubNav</us-badge>
+        <us-badge :variant="(isParentActive) ? 'success' : 'secondary'">isParentActive</us-badge>
     </a>
+
 
     <!--            
     <li 
@@ -40,15 +62,11 @@ export default {
         title: {
             type: String,
             default: null
-        },        
-        ariaControls: {
-            type: String,
-            default: ''
-        },
-        ariaLabel: {
-            type: String,
-            default: ''
-        },
+        }, 
+        to: {
+            type: [String, Object],
+            default: null
+        },                 
         href: {
             type: String,
             default: null
@@ -56,10 +74,6 @@ export default {
         target: {
             type: String,
             default: '_self'
-        },
-        to: {
-            type: [String, Object],
-            default: null
         },
         disabled: {
             type: Boolean,
@@ -69,9 +83,9 @@ export default {
             type: Boolean,
             default: true
         },        
-        activeClass: {
-            type: String,
-            default: 'active'
+        active: {
+            type: Boolean,
+            default: false
         }
     },
     data() {
@@ -164,7 +178,8 @@ export default {
 
             // Remove the active state from all other nav items
             const removeActiveFromSiblings = ($ele) => {                                
-                $ele.$children.map((child)=>{                
+                $ele.$children.map((child)=>{               
+                    this.$log(child.$options.name ) 
                     if (child.$options && child.$options.name == 'us-side-nav-item'){
                         if (child.divId != this.divId){      
                             child.isActive = false;
@@ -177,6 +192,7 @@ export default {
             }
             
             removeActiveFromSiblings(this.$parent);
+
             if (this.$parent.$options.name == 'us-side-nav'){
                 removeActiveFromSiblings(this.$parent.$parent);
             }
@@ -205,6 +221,14 @@ export default {
 };
 </script>
 <style lang="scss">
+
+
+
+
+
+
+
+
 .usx-sidenav-item {
 
     cursor: pointer;

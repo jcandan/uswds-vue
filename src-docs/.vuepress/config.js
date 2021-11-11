@@ -124,15 +124,15 @@ module.exports = {
             //},
             //'components/footer',
             //'components/banner',
-            //'components/left-nav',
+            'components/left-nav',
             //'components/lists',
             //'components/modal',
-            //'components/progress',
+            'components/progress',
             //'components/step-indicator',
             //'components/image',
             //'components/table',
             //'components/tabs',
-            //'components/tag'
+            'components/badge'
           ]
         }
 

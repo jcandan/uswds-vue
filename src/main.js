@@ -5,8 +5,6 @@ import Logger from './utils/Logger';
 //import UsSideNavItem from './components/side-nav/UsSideNavItem';
 //import UsSideNav from './components/side-nav/UsSideNav';
 
-//import UsNavItem from './components/header/UsNavItem';
-
 /*
 import UsCard from './components/cards/UsCard';
 import UsCardHeader from './components/cards/UsCardHeader';
@@ -28,40 +26,46 @@ import UsFormCheckbox from './components/form/UsFormCheckbox';
 import UsStepIndicator from './components/form/UsStepIndicator';
 import UsButtonGroup from './components/UsButtonGroup';
 //import UsButtonGroup from './components/UsButtonGroup';
-import UsPill from './components/UsPill';
 import UsImg from './components/UsImg';
 import UsHeader from './components/header/UsHeader';
 import UsFooter from './components/UsFooter';
-
+import UsNavItem from './components/header/UsNavItem';
 import UsHeaderNav from './components/header/UsHeaderNav';
 
 import UsHeaderBrand from './components/header/UsHeaderBrand';
-import UsContainer from './components/layout/UsContainer';
-import UsRow from './components/layout/UsRow';
-import UsCol from './components/layout/UsCol';
 import UsTab from './components/tabs/UsTab';
 import UsTabs from './components/tabs/UsTabs';
 import UsListGroup from './components/lists/UsListGroup';
 import UsListGroupItem from './components/lists/UsListGroupItem';
 import UsTable from './components/UsTable';
 import UsModal from './components/UsModal';
-import UsProgress from './components/UsProgress';
 */
 
 // Debug components
 //import UsResponsiveInfo from './components/debug/UsResponsiveInfo';
 
+import UsContainer from './components/layout/UsContainer';
+import UsRow from './components/layout/UsRow';
+import UsCol from './components/layout/UsCol';
 import UsAlert from './components/UsAlert';
 import UsButton from './components/UsButton';
+import UsProgress from './components/UsProgress';
+import UsBadge from './components/UsBadge';
+import UsSideNav from './components/side-nav/UsSideNav';
+import UsSideNavItem from './components/side-nav/UsSideNavItem';
 
 
 export const Components = {
+    UsContainer,
+    UsRow,
+    UsCol,
     UsAlert,
-    UsButton
-    //UsAlert: require('./components/UsAlert'),
-    //UsButton: require('./components/UsButton'),
-    //UsTag,
-    //UsButton
+    UsButton,
+    UsProgress,
+    UsBadge,
+    'UsTag': UsBadge,
+    UsSideNavItem,
+    UsSideNav
 };
 
 /**

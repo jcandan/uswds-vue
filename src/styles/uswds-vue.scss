@@ -2,6 +2,30 @@
 // TODO: just pull in icons used
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
 
+// Then import Bootstrap an BootstrapVue SCSS files (order is important)
+//@import "./variables.scss";
+//@import "./colors.scss";
+@import "./a11y-color.scss";
+@import "~bootstrap/scss/bootstrap.scss";
+
+// See https://css-tricks.com/programming-sass-to-create-accessible-color-combinations/
+@each $variant, $token in $theme-colors {
+    
+    $color: map-get($theme-colors, $variant);
+    //$foreColor: #fff;
+
+    //@if light-or-dark($color) == 'dark' {
+    //    $foreColor: #000;
+    //}
+        
+    .bg-text-#{$variant} {
+        // color: a11y-color($foreColor, $color) !important;
+        color: color-contrast($color) !important;     
+    }  
+}
+
+
+
 .nav {
 
     .nav-item {

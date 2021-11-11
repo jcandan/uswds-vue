@@ -3,7 +3,7 @@
     <router-link 
         v-if="to" 
         tag='button'
-        :class="['usx-component', 'btn', 'btn-'+variant]"      
+        :class="['usx-component', 'btn', 'btn-'+variant, `bg-text-${variant}`]"      
         :to="to">
         <slot name="default"> Button </slot>
         <i class="fas fa-spinner fa-spin ml-1" v-if="isLoading"></i>
@@ -12,7 +12,7 @@
     <button
         v-else 
         v-bind="$props"
-        :class="['usx-component', 'btn', 'btn-'+variant]"
+        :class="['usx-component', 'btn', 'btn-'+variant, `bg-text-${variant}`]"
         @click="onClick()"
     >
         <slot name="default"> Button </slot>

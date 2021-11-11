@@ -16,8 +16,6 @@
 
 @import "../../../src//styles/uswds-vue.scss";
 @import "./theme.scss";
-// Then import Bootstrap an BootstrapVue SCSS files (order is important)
-@import '~bootstrap/scss/bootstrap.scss';
 
 div.theme-default-content:not(.custom), .page-edit, .page-nav {
     max-width: 1200px !important;

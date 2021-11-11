@@ -1,5 +1,4 @@
 <template>
-
     <div class="usx-component usx-progress">
         <div role="progressbar" 
             :aria-valuemin="min" 
@@ -15,7 +14,6 @@
             </slot>
         </div>
     </div>
-
 </template>
 
 <script>
