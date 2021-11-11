@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.37](https://github.com/usds/uswds-vue/compare/v0.1.32...v0.1.37) (2021-11-11)
+
+
+### Bug Fixes
+
+* fixes to combo box ([e4c3258](https://github.com/usds/uswds-vue/commit/e4c32581a37e5755f1e10d70e25d228c9c748954))
+* fixes to loose styles for dropdown ([1ce6e71](https://github.com/usds/uswds-vue/commit/1ce6e71678c595e2d7a153107b69a0e3c3456749))
+* form not emitting the event ([230c1ce](https://github.com/usds/uswds-vue/commit/230c1ce9121b5fb9373db0e8086c46ff2f69982f))
+* minor fixes to step indicator ([0fdd117](https://github.com/usds/uswds-vue/commit/0fdd1173e6a7653f2971d03c55eb59460ec6f67e))
+
 ### [0.1.36](https://github.com/usds/uswds-vue/compare/v0.1.35...v0.1.36) (2021-03-10)
 
 

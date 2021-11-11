@@ -1,6 +1,6 @@
 {
   "name": "uswds-vue",
-  "version": "0.1.36",
+  "version": "0.1.37",
   "private": false,
   "description": "Vue USWDS component library",
   "scripts": {
@@ -27,7 +27,7 @@
     "core-js": "^3.6.5",
     "lodash": "^4.17.20",
     "moment": "^2.29.1",
-    "uswds": "^2.9.0",
+    "uswds": "^2.12.2",
     "vue-the-mask": "^0.11.1"
   },
   "devDependencies": {
