@@ -1,4 +1,5 @@
 import Logger from './utils/Logger';
+import 'bootstrap';
 
 /*
 import UsForm from './components/form/UsForm';

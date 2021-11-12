@@ -1,7 +1,7 @@
 <template>
 
 <div class="usx-component usx-modal" v-if="divId">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" :data-bs-target="`#${divId}`">Open</button>
+    <button :id="`btn_${divId}`" type="button" class="btn btn-primary" data-bs-toggle="modal" :data-bs-target="`#${divId}`">Open</button>
     <div :id="divId" class="modal" tabindex="-1" :class="[`modal-${size}`]" >
         <div class="modal-dialog">
             <div class="modal-content">
@@ -25,7 +25,7 @@
 
 
 <!--
-
+v-bind="$props"
     <div class="usx-modal" :class="{'open fade-in-background':isOpen}" id="dialog1" aria-labelledby="dialog1_label" aria-modal="true">
         <us-card class="usx-modal-container" :class="[`modal-${size}`]">
             <us-card-header>
@@ -101,7 +101,7 @@ export default {
             var S4 = function () {
                 return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
             };
-            return S4() + S4() + '-' + S4() + '-' + S4() + '-' + S4() + '-' + S4() + S4() + S4();
+            return S4() + S4() + S4() + S4() + S4() + S4() + S4() + S4();
         },                
         onAffirmative(){
             this.$emit('ok');
