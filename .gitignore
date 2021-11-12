@@ -12,6 +12,10 @@ run
 config.local.js
 basement_dist
 
+# Vuepress cache
+src-docs/.vuepress/.cache
+src-docs/.vuepress/.temp
+
 # local env files
 .env.local
 .env.*.local
