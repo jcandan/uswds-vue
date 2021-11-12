@@ -15,6 +15,14 @@
                     <p>Modal body text goes here.</p>
                 </div>
                 <div class="modal-footer">
+                    
+                    <slot name="buttons" v-bind="{onAffirmative, onCancel}">
+                        <div align="right">
+                            <us-button variant="outline-primary" @click="onCancel" data-bs-dismiss="modal">{{btnCancel}}</us-button>
+                            <us-button variant="primary" @click="onAffirmative">{{btnOk}}</us-button>
+                        </div>
+                    </slot>
+
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
