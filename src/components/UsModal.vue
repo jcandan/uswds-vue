@@ -1,4 +1,31 @@
 <template>
+
+<div class="usx-component usx-modal" v-if="divId">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" :data-bs-target="`#${divId}`">Open</button>
+    <div :id="divId" class="modal" tabindex="-1" :class="[`modal-${size}`]" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <slot name="footer">Modal title</slot>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--
+
     <div class="usx-modal" :class="{'open fade-in-background':isOpen}" id="dialog1" aria-labelledby="dialog1_label" aria-modal="true">
         <us-card class="usx-modal-container" :class="[`modal-${size}`]">
             <us-card-header>
@@ -18,6 +45,8 @@
             </us-card-footer>
         </us-card>
     </div>
+-->
+
 </template>
 
 <script>
@@ -45,22 +74,35 @@ export default {
         size: {
             type: String,
             default: 'md'
+        },
+        show: {
+            type: Boolean,
+            default: false
         }          
     },
     data(){
         return {
-            isOpen: true
+            isOpen: true,
+            divId: null
         }
     },
     watch: {
         value() {
+            //var myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
             this.isOpen = this.value;
         }
     },
     mounted() {
+        this.divId = this.uuid();
         this.isOpen = this.value;
     },
     methods: {
+        uuid() {
+            var S4 = function () {
+                return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+            };
+            return S4() + S4() + '-' + S4() + '-' + S4() + '-' + S4() + '-' + S4() + S4() + S4();
+        },                
         onAffirmative(){
             this.$emit('ok');
             this.close();
@@ -78,7 +120,7 @@ export default {
 </script>
 <style lang="scss">
 
-.usx-modal {
+.usx-modal-old {
     
     .close-btn {
         margin-top: -15px;

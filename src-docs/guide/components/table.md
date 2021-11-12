@@ -187,8 +187,26 @@ export default {
 </script>
 ```
 
-The slot's scope variable (data in the above sample) will have the following properties:
 
+## Component Reference
+
+### `<us-table>`
+
+### Properties 
+
+| Property | Type  | Default | Description |
+| -------- | ----- | ------- | ----------- | 
+| variant  | string | none | Applies one of the contextual color variants |
+| borderless | string | false | Removes the table border |
+| striped | boolean | true | Adds stripes |
+| caption | string | null | Support for a `<caption>` tag | 
+| hover | boolean | false | Makes cells hoverable |
+| items | array|object | null | Pass an array of items to automatically populate a table |
+| fields | array|object | null | Pass details on how to render items passed in |
+
+### Slots
+
+The slot's scope variable (data in the above sample) will have the following properties:
 
 | Property | Type  | Description |
 | -------- | ----- | ----------- | 
@@ -200,6 +218,12 @@ The slot's scope variable (data in the above sample) will have the following pro
 `index` will not always be the actual row's index number, as it is computed after filtering, sorting and pagination have been applied to the original table data. The index value will refer to the displayed row number. This number will align with the indexes from the optional v-model bound variable.
 
 When using the new Vue 2.6 v-slot syntax, note that slot names cannot contain spaces, and when using in-browser DOM templates the slot names will always be lower cased. To get around this, you can pass the slot name using Vue's dynamic slot names.
+
+
+### Further Reading
+
+See [Table documentation at USWDS](https://designsystem.digital.gov/components/table/)
+See [Table documentation at Bootstrap](https://getbootstrap.com/docs/5.1/content/tables/)
 
 <script>
 export default {

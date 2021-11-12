@@ -126,11 +126,11 @@ module.exports = {
             'components/banner',
             'components/left-nav',
             //'components/lists',
-            //'components/modal',
+            'components/modal',
             'components/progress',
             //'components/step-indicator',
             //'components/image',
-            //'components/table',
+            'components/table',
             //'components/tabs',
             'components/badge'
           ]

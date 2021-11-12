@@ -1,5 +1,5 @@
 <template>
-    <table class="usx-component usa-table usx-table w-100" :class="{'usa-table--borderless':borderless}">
+    <table class="usx-component usa-table usx-table table-responsive" :class="{'table-bordered':!borderless, 'table-striped':striped}">
         <caption v-if="caption">
             {{caption}}
         </caption>
@@ -42,7 +42,7 @@ export default {
     props: {
         variant: {
             type: String,
-            default: 'info'
+            default: 'primary'
         },
         caption: {
             type: String,
@@ -54,7 +54,7 @@ export default {
         },
         striped: {
             type: Boolean,
-            default: false
+            default: true
         },  
         hover: {
             type: Boolean,
@@ -138,10 +138,13 @@ export default {
             display: table !important;
         }
 
+/*
+
+
         .odd td {
             background-color: rgba(240,240,240,0.3);
         }
-/*
+
         .table-hover > tbody > tr:hover {
             --bs-table-accent-bg: var(--bs-table-hover-bg);
             color: var(--bs-table-hover-color);

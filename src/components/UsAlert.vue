@@ -9,8 +9,10 @@
         </div>
 
         <div>
-            <h2 class="p-0 m-0" v-if="title">{{title}}</h2>
-            <slot />
+            <slot name="title">
+                <h2 class="p-0 m-0" v-if="title">{{title}}</h2>
+            </slot>
+            <slot name="default"/>
         </div>
 
         <div class="ms-auto btn btn-link p-0 m-0" data-bs-dismiss="alert" aria-label="Close" @click="isShown = false" v-if="dismissible">

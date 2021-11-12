@@ -4,7 +4,7 @@ An alert keeps users informed of important and sometimes time-sensitive changes.
 
 ## Overview
 
-<us-alert show dismissible show title="Info">This is a info message</us-alert>
+<us-alert show dismissible title="Info">This is a info message</us-alert>
 
 ``` vue
 <us-alert show variant="info" title="Info">

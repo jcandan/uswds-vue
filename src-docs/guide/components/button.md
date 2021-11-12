@@ -60,7 +60,7 @@ Set the `isLoading` property to display a loading spinner, this will also put th
 
 <div class="mt-3 mb-3">
 <us-button variant="primary" class="mr-3" :is-loading="isLoading">Submit</us-button>
-<us-button size="sm" variant="outline-primary" @click="isLoading = !isLoading">Toggle Loading Flag</us-button>
+<us-button size="sm" variant="link" @click="isLoading = !isLoading">Toggle Loading Flag</us-button>
 </div>
 
 ``` vue
@@ -69,7 +69,7 @@ Set the `isLoading` property to display a loading spinner, this will also put th
 </us-button>
 
 <!-- Button to toggle isLoading flag for testing -->
-<us-button variant="outline-primary" @click="isLoading = !isLoading">
+<us-button variant="link" @click="isLoading = !isLoading">
     Toggle Loading Flag
 </us-button>
 ```

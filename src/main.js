@@ -23,8 +23,7 @@ import UsTab from './components/tabs/UsTab';
 import UsTabs from './components/tabs/UsTabs';
 import UsListGroup from './components/lists/UsListGroup';
 import UsListGroupItem from './components/lists/UsListGroupItem';
-import UsTable from './components/UsTable';
-import UsModal from './components/UsModal';
+
 */
 
 // Debug components
@@ -40,10 +39,6 @@ import UsBadge from './components/UsBadge';
 import UsSideNav from './components/side-nav/UsSideNav';
 import UsOfficialHeader from './components/header/UsOfficialHeader';
 import UsCard from './components/cards/UsCard';
-import UsCardHeader from './components/cards/UsCardHeader';
-import UsCardFooter from './components/cards/UsCardFooter';
-import UsCardBody from './components/cards/UsCardBody';
-import UsCardGroup from './components/cards/UsCardGroup';
 
 import UsHeader from './components/header/UsHeader';
 import UsFooter from './components/UsFooter';
@@ -51,14 +46,12 @@ import UsNavItem from './components/header/UsNavItem';
 import UsHeaderNav from './components/header/UsHeaderNav';
 import UsHeaderBrand from './components/header/UsHeaderBrand';
 
+import UsTable from './components/UsTable';
+import UsModal from './components/UsModal';
 
 export const Components = {
     UsOfficialHeader,
     UsCard,
-    UsCardHeader,
-    UsCardFooter,
-    UsCardBody,
-    UsCardGroup,
     UsHeader, 
     UsFooter, 
     UsNavItem,
@@ -72,7 +65,9 @@ export const Components = {
     UsProgress,
     UsBadge,
     'UsTag': UsBadge,
-    UsSideNav
+    UsSideNav,
+    UsTable,
+    UsModal
 };
 
 /**
