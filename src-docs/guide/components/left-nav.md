@@ -95,7 +95,11 @@ export default {
                     {name: 'API\'s', icon: 'fal fa-rocket-launch'},
                     {name: 'Realtime Database', icon: 'fal fa-database'},
                     {name: 'Storage', icon: 'fal fa-box-open'},
-                    {name: 'Functions', icon: 'fal fa-function'}
+                    {name: 'Functions', icon: 'fal fa-function', children: [
+                        {name: 'Sub-Page 1', icon: 'far fa-file-alt'},
+                        {name: 'Sub-Page 2', icon: 'far fa-file-alt'},
+                        {name: 'Sub-Page 3', icon: 'far fa-file-alt'}
+                    ]}
                 ]},                
                 {name: 'Release & Monitor', children: [
                     {name: 'Crashlytics', icon: 'fal fa-car-crash'},

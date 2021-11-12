@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import CoreMixin from '../mixins/CoreMixin';
+import CoreMixin from '../../mixins/CoreMixin';
 /**
  * @see https://designsystem.digital.gov/utilities/layout-grid/
  */

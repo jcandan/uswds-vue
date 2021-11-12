@@ -27,9 +27,9 @@ We recommend that all federal government sites include the “official governmen
 ### Locale
 
 <div>    
-    <us-official-header variant="light" :locale="locale" class="mt-2"/>
-    <b-button v-if="locale == 'en'" variant="info" @click="locale = 'es'">Change to Spanish</b-button>
-    <b-button v-else variant="info" @click="locale = 'en'">Change to English</b-button>
+    <us-official-header variant="light" :locale="locale" class="mt-2 mb-2"/>
+    <us-button v-if="locale == 'en'" variant="primary" @click="locale = 'es'">Change to Spanish</us-button>
+    <us-button v-else variant="primary" @click="locale = 'en'">Change to English</us-button>
 </div>
 
 ```vue

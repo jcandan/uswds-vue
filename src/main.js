@@ -1,16 +1,6 @@
 import Logger from './utils/Logger';
 
-//import UsTag from './components/UsTag';
-//import UsOfficialHeader from './components/header/UsOfficialHeader';
-//import UsSideNavItem from './components/side-nav/UsSideNavItem';
-//import UsSideNav from './components/side-nav/UsSideNav';
-
 /*
-import UsCard from './components/cards/UsCard';
-import UsCardHeader from './components/cards/UsCardHeader';
-import UsCardFooter from './components/cards/UsCardFooter';
-import UsCardBody from './components/cards/UsCardBody';
-import UsCardGroup from './components/cards/UsCardGroup';
 import UsForm from './components/form/UsForm';
 import UsFormInput from './components/form/UsFormInput';
 import UsFormInputMasked from './components/form/UsFormInputMasked';
@@ -23,16 +13,12 @@ import UsFormDate from './components/form/UsFormDate';
 import UsFormRadio from './components/form/UsFormRadio';
 import UsFormBoolean from './components/form/UsFormBoolean';
 import UsFormCheckbox from './components/form/UsFormCheckbox';
+
 import UsStepIndicator from './components/form/UsStepIndicator';
+
 import UsButtonGroup from './components/UsButtonGroup';
 //import UsButtonGroup from './components/UsButtonGroup';
 import UsImg from './components/UsImg';
-import UsHeader from './components/header/UsHeader';
-import UsFooter from './components/UsFooter';
-import UsNavItem from './components/header/UsNavItem';
-import UsHeaderNav from './components/header/UsHeaderNav';
-
-import UsHeaderBrand from './components/header/UsHeaderBrand';
 import UsTab from './components/tabs/UsTab';
 import UsTabs from './components/tabs/UsTabs';
 import UsListGroup from './components/lists/UsListGroup';
@@ -52,10 +38,32 @@ import UsButton from './components/UsButton';
 import UsProgress from './components/UsProgress';
 import UsBadge from './components/UsBadge';
 import UsSideNav from './components/side-nav/UsSideNav';
-import UsSideNavItem from './components/side-nav/UsSideNavItem';
+import UsOfficialHeader from './components/header/UsOfficialHeader';
+import UsCard from './components/cards/UsCard';
+import UsCardHeader from './components/cards/UsCardHeader';
+import UsCardFooter from './components/cards/UsCardFooter';
+import UsCardBody from './components/cards/UsCardBody';
+import UsCardGroup from './components/cards/UsCardGroup';
+
+import UsHeader from './components/header/UsHeader';
+import UsFooter from './components/UsFooter';
+import UsNavItem from './components/header/UsNavItem';
+import UsHeaderNav from './components/header/UsHeaderNav';
+import UsHeaderBrand from './components/header/UsHeaderBrand';
 
 
 export const Components = {
+    UsOfficialHeader,
+    UsCard,
+    UsCardHeader,
+    UsCardFooter,
+    UsCardBody,
+    UsCardGroup,
+    UsHeader, 
+    UsFooter, 
+    UsNavItem,
+    UsHeaderNav,
+    UsHeaderBrand,
     UsContainer,
     UsRow,
     UsCol,
@@ -64,7 +72,6 @@ export const Components = {
     UsProgress,
     UsBadge,
     'UsTag': UsBadge,
-    UsSideNavItem,
     UsSideNav
 };
 

@@ -3,12 +3,12 @@
        
         <header class="usx-component usx-banner" aria-label="Official government website" :class="`bg-${variant}`">
             
-            <b-container>
+            <us-container>
 
                 <p class="usx-banner-text">
                     <icon-flag class="usx-flag"/>
                     An official website of the United States government
-                    <span class="usx-banner-toggle" v-b-toggle.usx-banner-info-collapse>
+                    <span class="usx-banner-toggle" @click="isOpen = !isOpen">
                         Here’s how you know
                         <i v-if="!isOpen" class="fas fa-chevron-down"></i>
                         <i v-else class="fas fa-chevron-up"></i>
@@ -16,28 +16,28 @@
                 </p>
                 
 
-                <b-collapse id="usx-banner-info-collapse" class="mt-2" @show="isOpen = true" @hide="isOpen = false">
+                <div class="mt-2" v-if="isOpen">
 
-                    <b-row fluid class="usx-banner-info-container">
-                        <b-col>
+                    <us-row fluid class="usx-banner-info-container">
+                        <us-col>
                             <icon-dot-gov class="usx-banner-icon" />
                             <p class="usx-banner-info-text">
                                 <strong>Official websites use {{domain}}</strong><br />
                                 A <strong>{{domain}}</strong> website belongs to an official government organization in the United States.
                             </p>
-                        </b-col>
-                        <b-col>
+                        </us-col>
+                        <us-col>
                             <icon-https class="usx-banner-icon"/>
                             <p class="usx-banner-info-text">
                                 <strong>Secure {{domain}} websites use HTTPS</strong><br />
                                 A <strong>lock</strong> (<i class="fas fa-lock"></i>) or <strong>https://</strong> means you’ve safely connected to the {{domain}} website. 
                                 Share sensitive information only on official, secure websites.
                             </p>
-                        </b-col>
-                    </b-row>
-                </b-collapse>
+                        </us-col>
+                    </us-row>
+                </div>
             
-            </b-container>
+            </us-container>
 
         </header>
 
@@ -49,7 +49,6 @@
 import IconFlag from '../icons/IconFlag.vue';
 import IconDotGov from '../icons/IconDotGov';
 import IconHttps from '../icons/IconHttps';
-import { BCollapse } from 'bootstrap-vue';
 import TranslateMixin from '../../mixins/translation/TranslateMixin';
 
 /**
@@ -60,8 +59,7 @@ export default {
     components: {
         IconFlag,
         IconDotGov,
-        IconHttps,
-        BCollapse
+        IconHttps
     },
     mixins: [TranslateMixin],        
     props: {

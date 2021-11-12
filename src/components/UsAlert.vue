@@ -1,5 +1,5 @@
 <template>
-    <div class="usx-component alert d-flex" :class="['alert-'+variant]" role="alert" v-if="isShown">
+    <div class="usx-component alert d-flex" :class="['alert-'+variant, 'alert-'+size]" role="alert" v-if="isShown">
 
         <div class='usx-alert-icon' :class="(title) ? 'usx-alert-icon-with-title' : 'usx-alert-icon-no-title'" v-if="!noIcon">
             <i v-if="variant=='warning'" class="fas fa-exclamation-triangle"></i>
@@ -76,6 +76,11 @@ export default {
 //@import "~bootstrap/scss/bootstrap.scss";
 
 .usx-component.alert {
+
+    &.alert-sm {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
 
     .usx-alert-icon {
         font-size: 24px;

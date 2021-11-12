@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import md5 from '../../utils/md5';
 import _ from 'lodash';
-import { BIconTelephoneMinus } from 'bootstrap-vue';
 
 const EVENT_BUS = new Vue();
 

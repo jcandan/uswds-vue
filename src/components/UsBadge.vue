@@ -1,6 +1,6 @@
 <template>
 
-    <span ref="usxBadgeRef" class="usx-component badge" :class="[`bg-${variant}`, `bg-text-${variant}`, (pill)?'':'rounded-pill']">
+    <span ref="usxBadgeRef" class="usx-component badge" :class="[`bg-${variant}`, `text-${variant}-contrast`, (pill)?'':'rounded-pill']">
         <slot></slot>
     </span>
 

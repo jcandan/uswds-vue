@@ -1,4 +1,17 @@
 <template>
+    <div class="usx-component card" :class="[`bg-${variant}`, `text-${variant}-contrast`]">
+        <!--<img src="..." class="card-img-top" alt="...">-->
+        <img v-if="imgSrc" :src="imgSrc" :alt="imgAlt"/>
+        <div class="card-body">
+            <h5 class="card-title" v-if="title && !hasHeader">{{title}}</h5>
+            <slot name="default"/>
+            <!--
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+            -->
+        </div>
+    </div>
+<!--
     <div class="usx-component usa-card usx-card" :class="{
             'usa-card--flag':imgSrc && imgPos=='left', 
             'usa-card--flag usa-card--media-right': imgSrc && imgPos=='right',
@@ -22,19 +35,11 @@
             <div class="usa-card__body" :class="{'usa-card__body--exdent': cardExdent, 'usx-card-overflow':overflow}" v-else>
                 <slot name="default"/>
             </div>
-            
-            <!--
-            <div class="usa-card__body" :class="{'usa-card__body--exdent': cardExdent}" v-if="!hasChild('body')">
-            </div>
-            -->
 
-            <!--
-            <div class="usa-card__footer" :class="{'usa-card__footer--exdent': cardExdent}">
-                <slot name="footer"></slot>
-            </div>
-            -->
         </div>
     </div>
+
+    -->
 </template>
 
 <script>
@@ -44,7 +49,7 @@
  * @props
  */
 
-import CoreMixin from '../mixins/CoreMixin';
+import CoreMixin from '../../mixins/CoreMixin';
 
 export default {
     name: 'us-card',

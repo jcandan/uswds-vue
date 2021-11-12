@@ -3,16 +3,16 @@
     <router-link 
         v-if="item.to"
         :to="item.to"
-        class="nav-link" 
+        class="usx-component nav-link" 
         @click="onClick(item)">
-        {{item.name}} {{item._id}}
+        <i v-if="item.icon" :class="item.icon" class="fa-fw"></i> {{item.name}}
     </router-link>
     
     <a v-else 
-        class="nav-link" 
+        class="usx-component nav-link" 
         :href="item.href"
         @click="onClick(item)">
-        {{item.name}} {{item._id}}
+        <i v-if="item.icon" :class="item.icon" class="fa-fw"></i> {{item.name}}
     </a>
 
 </template>
@@ -37,3 +37,10 @@ export default {
     }
 };
 </script>
+<style lang="scss">
+.usx-component {
+    .fa-fw {
+        margin-right: 8px;
+    }
+}
+</style>

@@ -102,7 +102,7 @@ module.exports = {
           children: [
             'components/alert',
             'components/button',
-            //'components/card',
+            'components/card',
             //'components/form',
             //'components/form-group',
             //{
@@ -123,7 +123,7 @@ module.exports = {
             //  ]
             //},
             //'components/footer',
-            //'components/banner',
+            'components/banner',
             'components/left-nav',
             //'components/lists',
             //'components/modal',

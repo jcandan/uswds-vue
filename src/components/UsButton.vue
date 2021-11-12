@@ -3,7 +3,7 @@
     <router-link 
         v-if="to" 
         tag='button'
-        :class="['usx-component', 'btn', 'btn-'+variant, `bg-text-${variant}`]"      
+        :class="['usx-component', 'btn', 'btn-'+variant, `text-${variant}-contrast`]"      
         :to="to">
         <slot name="default"> Button </slot>
         <i class="fas fa-spinner fa-spin ml-1" v-if="isLoading"></i>
@@ -12,7 +12,7 @@
     <button
         v-else 
         v-bind="$props"
-        :class="['usx-component', 'btn', 'btn-'+variant, `bg-text-${variant}`]"
+        :class="['usx-component', 'btn', 'btn-'+variant, `text-${variant}-contrast`]"
         @click="onClick()"
     >
         <slot name="default"> Button </slot>
@@ -36,8 +36,16 @@ export default {
             type: [String, Object],
             default: null
         }        
+    },
+    methods: {
+        onClick(){
+            this.$emit('click');
+        }
     }
 };
 </script>
 <style lang="scss">
+.usx-component.btn {
+    font-weight: 700;
+}
 </style>
