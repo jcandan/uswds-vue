@@ -3,7 +3,7 @@
  ## Basic Usage 
 
 <div class="mt-3 mb-3">    
-    <us-modal v-model="showModal" title="A simple modal" @ok="" @cancel="">
+    <us-modal :show="showModal" title="A simple modal" @ok="" @cancel="">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum tenetur quo cupiditate, eaque qui officia recusandae. Excepturi nobis dolores molestias! Quas quisquam a officia eos.
     </us-modal>
     <us-button v-if="!showModal" variant="primary" @click="showModal = true">Show</us-button>

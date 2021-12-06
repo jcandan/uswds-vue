@@ -82,20 +82,20 @@ module.exports = {
             ''
           ]
         },
-        { 
-          title: 'Utils',
-          collapsable: false,
-          children: [
-            'utils/breakpoints',
-            'utils/display',
-            'utils/spacing',
-            'utils/layout',
-            'utils/colors',
-            'utils/theme-generator',
-            'utils/typography',
-            'utils/validation'           
-          ]
-        },
+        //{ 
+        //  title: 'Utils',
+        //  collapsable: false,
+        //  children: [
+            //'utils/breakpoints',
+            //'utils/display',
+            //'utils/spacing',
+            //'utils/layout',
+            //'utils/colors',
+            //'utils/theme-generator',
+            //'utils/typography',
+            //'utils/validation'           
+        //  ]
+        //},
         {
           title: 'Components',
           collapsable: false,
@@ -103,36 +103,36 @@ module.exports = {
             'components/alert',
             'components/button',
             'components/card',
-            'components/form',
-            'components/form-group',
-            {
-              title: 'Form Inputs',
-              collapsable: false,
-              children: [
-                'components/form-inputs/form-checkbox',
-                'components/form-inputs/form-radio',
-                'components/form-inputs/form-combobox',
-                'components/form-inputs/form-date',
-                'components/form-inputs/form-date-picker',
-                'components/form-inputs/form-date-range',
-                'components/form-inputs/form-fileinput',
-                'components/form-inputs/form-input',
-                'components/form-inputs/form-slider',
-                'components/form-inputs/form-time',
-                'components/form-inputs/form-boolean'
-              ]
-            },
-            'components/footer',
-            'components/header',
+            //'components/form',
+            //'components/form-group',
+            //{
+            //  title: 'Form Inputs',
+            //  collapsable: false,
+            //  children: [
+            //    'components/form-inputs/form-checkbox',
+            //    'components/form-inputs/form-radio',
+            //    'components/form-inputs/form-combobox',
+            //    'components/form-inputs/form-date',
+            //    'components/form-inputs/form-date-picker',
+            //    'components/form-inputs/form-date-range',
+            //    'components/form-inputs/form-fileinput',
+            //    'components/form-inputs/form-input',
+            //    'components/form-inputs/form-slider',
+            //    'components/form-inputs/form-time',
+            //    'components/form-inputs/form-boolean'
+            //  ]
+            //},
+            //'components/footer',
+            'components/banner',
             'components/left-nav',
-            'components/lists',
+            //'components/lists',
             'components/modal',
             'components/progress',
-            'components/step-indicator',
+            //'components/step-indicator',
             //'components/image',
             'components/table',
-            'components/tabs',
-            'components/tag'
+            //'components/tabs',
+            'components/badge'
           ]
         }
 

@@ -12,20 +12,10 @@
     }    
 }
 
-@import "~uswds/dist/css/uswds.css";
-@import "../../../src/styles/uswds-vue.scss"
-//@import "../../../../src/styles/uswds-vue.scss";
+//@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css";
 
-
-a.sidebar-link.active,  a.sidebar-link:active {
-    outline: none !important;
-}
-
-a.sidebar-link.active  {
-    font-weight: 600 !important;
-    color: #3eaf7c !important;
-    border-left-color: #3eaf7c !important;
-}  
+@import "../../../src//styles/uswds-vue.scss";
+@import "./theme.scss";
 
 div.theme-default-content:not(.custom), .page-edit, .page-nav {
     max-width: 1200px !important;

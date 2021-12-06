@@ -15,7 +15,7 @@
                     'usa-step-indicator__segment--current': step == index}"
             >
                 <span class="usa-step-indicator__segment-label">
-                    <span v-if="item && item.title && showLabels">{{item.title}}</span>
+                    <span v-if="item.title && showLabels">{{item.title}}</span>
                     <span v-else-if="showLabels">{{item}}</span>
                     <span v-if="step < index" class="usa-sr-only">completed</span>
                     <span v-if="step < index" class="usa-sr-only">not completed</span>
@@ -79,7 +79,7 @@ export default {
     computed: {
         currentTitle(){
             if (this.steps && this.steps[this.step]){
-                if (typeof this.steps[this.step].title != 'undefined'){
+                if (this.steps[this.step].title){
                     return this.steps[this.step].title;
                 }
                 else {

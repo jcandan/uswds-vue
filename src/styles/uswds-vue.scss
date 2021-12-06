@@ -1,16 +1,32 @@
 
-// Pull in uswds defaults
-//@import "./uswds/settings/settings-color";
+// TODO: just pull in icons used
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+// Then import Bootstrap an BootstrapVue SCSS files (order is important)
+//@import "./variables.scss";
+//@import "./colors.scss";
+@import "./a11y-color.scss";
+@import "~bootstrap/scss/bootstrap.scss";
+
+// See https://css-tricks.com/programming-sass-to-create-accessible-color-combinations/
+@each $variant, $token in $theme-colors {
+    
+    $color: map-get($theme-colors, $variant);
+    //$foreColor: #fff;
+
+    //@if light-or-dark($color) == 'dark' {
+    //    $foreColor: #000;
+    //}
+        
+    .text-#{$variant}-contrast {
+        // color: a11y-color($foreColor, $color) !important;
+        color: color-contrast($color) !important;     
+    }  
+}
 
 
-@import "./core.scss";
-
-//@import "./usx-component.scss";
-@import "./variables.scss";
-@import "./mixins.scss";
-@import "./functions.scss";
-@import "./utilities.scss";
-@import "./colors.scss";
-
-// TODO: bring into project.. but only used icons?
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
+.btn {
+    &.btn-link {
+        text-decoration: underline;
+    }
+}
