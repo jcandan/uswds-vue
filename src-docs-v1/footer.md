@@ -1,4 +1,0 @@
-# Footer
-
-
-## Docs coming soon....
